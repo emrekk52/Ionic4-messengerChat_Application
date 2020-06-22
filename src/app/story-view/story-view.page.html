@@ -1,0 +1,29 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+
+    <img *ngIf="selectedStory?.imageURL!=null" slot="start" (click)="goToProfile()" class="img"
+      src={{selectedStory?.imageURL}}>
+    <img *ngIf="selectedStory?.imageURL==null" slot="start" (click)="goToProfile()" class="img"
+      src="../../assets/user2.png">
+    <ion-text (click)="goToMessage()" class="text">{{selectedStory?.firstName}} {{selectedStory?.lastName}}<ion-text
+        *ngIf="selectedStory?.status==='online'" class="online"> ● </ion-text>
+      <ion-text *ngIf="selectedStory?.status!='online'" class="offline"> ● </ion-text>
+      <ion-text class="mail">{{selectedStory?.email}}</ion-text>
+    </ion-text>
+    <ion-icon slot="end" (click)="exit()" class="icon" name="close-circle-outline"></ion-icon>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card class="card">
+    <div class="flex-content">
+      <img id="photo-fullscreen" src={{selectedStory?.uploadImage}}>
+    </div>
+  </ion-card>
+  <ion-button color="success" expand="block" shape="outline" (click)="getStoryView()"
+    *ngIf="selectedStory?.email===email">
+    Hikayemi Görenler
+  </ion-button>
+</ion-content>

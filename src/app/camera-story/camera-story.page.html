@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title">Hikaye Ekle</ion-title>
+    <ion-buttons (click)="again()" slot="end">
+      <ion-icon class="again" name="refresh-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-content>
+      <img class="img" src={{image}}>
+    </ion-card-content>
+  </ion-card>
+  <ion-button (click)="uploadStory()" color="danger" expand="block" fill="outline">Hikaye Yükle <ion-icon
+      name="logo-firebase">
+    </ion-icon>
+  </ion-button>
+
+</ion-content>

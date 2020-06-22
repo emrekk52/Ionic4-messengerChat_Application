@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="title">{{selectProfile?.firstName}} {{selectProfile?.lastName}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-content>
+      <img class="img" src={{selectProfile?.imageURL}}>
+    </ion-card-content>
+  </ion-card>
+  <ion-button (click)="back()" expand="block" fill="outline">Tamam<ion-icon name="caret-back-outline"></ion-icon>
+  </ion-button>
+
+</ion-content>

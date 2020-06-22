@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar [color]="isRecording ? 'danger':'primary'">
+    <ion-buttons slot="start">
+      <ion-back-button class="back" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title *ngIf="isRecording===false" class="title">Kullanıcı Arama</ion-title>
+    <ion-title *ngIf="isRecording===true" class="title">Dinleniyor..</ion-title>
+    <ion-buttons slot="end" (click)="getProfile()">
+      <ion-icon class="icon" name="cloud-download-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <ion-searchbar [(ngModel)]="query" placeholder="Arama" animated (ionChange)="searchUser(query)">
+
+
+    <ion-icon *ngIf="isRecording===false" (click)="voice()" class="mic" name="mic-outline"></ion-icon>
+    <ion-icon *ngIf="isRecording===true" (click)="stopListening()" class="mic-off" name="mic-off-outline"></ion-icon>
+
+
+  </ion-searchbar>
+
+  <ion-list *ngIf="searchList.length > 0; else temp">
+    <ion-item lines="none" *ngFor="let profile of searchList" (click)="selectProfile(profile)">
+      <ion-label>
+        <h3 class="ad">{{profile.firstName+' '+profile.lastName}}</h3>
+        <p class="email" slot="end">{{profile.email}}</p>
+        <p class="dtarih" slot="end">{{date}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ng-template #temp>
+  <ion-textarea class="template">
+    <ion-text>Aramak için "<ion-icon class="icon" name="search-outline"></ion-icon>" basın</ion-text>
+  </ion-textarea>
+</ng-template>

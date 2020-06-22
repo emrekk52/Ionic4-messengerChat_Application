@@ -1,0 +1,39 @@
+.template {
+    margin-top     : 60%;
+    font-weight    : bold;
+    color          : black;
+    font-size      : 17px;
+    text-align     : center;
+    justify-content: center;
+    font-family    : -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.online {
+    color    : #0084ff;
+    font-size : 8px;
+    margin-left: 2px;
+}
+
+.offline {
+    color: grey;
+    font-size : 8px;
+    margin-left: 2px;
+}
+
+.duzen {
+    width        : 40px;
+    height       : 40px;
+    border-radius: 50%;
+}
+
+.h3 {
+    font-weight: bold;
+    font-size  : 16px;
+    margin-left: 10px;
+}
+
+.header {
+    font-size  : 17px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

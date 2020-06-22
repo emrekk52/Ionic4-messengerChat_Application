@@ -1,0 +1,239 @@
+ion-content ion-toolbar {
+    --background: translucent;
+}
+
+.ion-no-border {
+    border: none !important;
+}
+
+.img {
+    border-radius: 50%;
+    height       : 37px;
+    width        : 37px;
+    margin-top   : 15px;
+    margin-left  : 10px;
+}
+
+.title {
+    margin-top : 20px;
+    font-weight: bolder;
+    font-size  : 26px;
+    color      : black;
+    margin-left: -10px;
+}
+
+.divcamera {
+    border-radius   : 50%;
+    background-color: rgb(231, 230, 230);
+    height          : 36px;
+    width           : 36px;
+    margin-top      : 15px;
+    margin-right    : 5px;
+    text-align      : center;
+    line-height     : 48px;
+
+
+    ion-icon {
+        height: 25px;
+        width : 25px;
+        color : black;
+
+    }
+}
+
+.divpen {
+    margin-top      : 15px;
+    margin-left     : 5px;
+    margin-right    : 5px;
+    border-radius   : 50%;
+    background-color: rgb(231, 230, 230);
+    height          : 36px;
+    width           : 36px;
+    text-align      : center;
+    line-height     : 48px;
+
+    ion-icon {
+        height: 25px;
+        width : 25px;
+        color : black;
+
+    }
+}
+
+.search {
+    margin-top: 10px;
+}
+
+
+
+
+.hikaye {
+    font-weight: bold;
+    color      : black;
+    font-size  : 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.stories {
+    display   : flex;
+    overflow  : scroll;
+    margin-top: -14px;
+
+    div {
+        p {
+            text-align: center;
+        }
+    }
+
+}
+
+.img-border {
+    margin         : 5px;
+    text-align     : center;
+    justify-content: center;
+
+    p {
+        font-size : 12px;
+        text-align: center;
+        color     : black;
+    }
+}
+
+.unseen {
+    margin         : 10px;
+    border-radius  : 50%;
+    height         : 60px;
+    width          : 60px;
+    border         : 3px solid rgb(0, 114, 255);
+    text-align     : center;
+    justify-content: center;
+    padding-top    : 2px;
+
+    img {
+        border-radius  : 50%;
+        text-align     : center;
+        justify-content: center;
+        border         : 2px solid white;
+        width          : 50px;
+        height         : 50px;
+
+    }
+}
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.add {
+    font-size: 70px;
+    color    : rgb(192, 192, 192);
+}
+
+.p {
+    color      : black;
+    text-align : center;
+    font-weight: bolder;
+}
+
+.mesaj {
+    margin-top : -10px;
+    font-weight: bold;
+    font-size  : 22px;
+}
+
+.chatimg {
+    border-radius: 50%;
+    height       : 40px;
+    width        : 40px;
+}
+
+.chatname {
+    margin-left: 10px;
+    font-weight: bold;
+    color      : black;
+}
+
+.chatmsg {
+    margin-top : 5px;
+    margin-left: 10px;
+    font-weight: lighter;
+    color      : black;
+}
+
+.online {
+    color      : rgb(0, 102, 255);
+    text-align : center;
+    font-size  : 8px;
+    margin-left: 2px;
+}
+
+.offline {
+    color      : rgb(194, 194, 194);
+    text-align : center;
+    font-size  : 8px;
+    margin-left: 2px;
+}
+
+.email {
+    color: rgb(156, 156, 156);
+}
+
+.storyadd {
+    margin-left : 10px;
+    margin-top  : 4px;
+    margin-right: 30px;
+
+    div {
+        margin-top      : 20px;
+        background-color: rgb(241, 241, 241);
+        border-radius   : 50%;
+        height          : 60px;
+        width           : 60px;
+        justify-content : center;
+        text-align      : center;
+
+        ion-icon {
+            color          : rgb(63, 63, 63);
+            height         : 37px;
+            width          : 37px;
+            justify-content: center;
+            text-align     : center;
+            margin-top     : 11px;
+        }
+    }
+
+    p {
+        text-align: center;
+        font-size : 12px;
+        color     : grey;
+        margin-top: 12px;
+    }
+}
+
+.img-user {
+    border       : 2px solid black;
+    height       : 35px;
+    width        : 35px;
+    border-radius: 50%;
+    margin-top   : 15px;
+    margin-left  : 10px;
+}
+
+.img-story {
+    border-radius  : 50%;
+    text-align     : center;
+    justify-content: center;
+    border         : 2px solid white;
+    width          : 50px;
+    height         : 50px;
+}
+
+.template {
+    margin-top : 35%;
+    text-align : center;
+    font-weight: bold;
+    font-size  : 17px;
+}
+

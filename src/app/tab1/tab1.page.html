@@ -1,0 +1,91 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="goToProfile()">
+      <img *ngIf="myProfile?.imageURL!=null" class="img" src={{myProfile?.imageURL}}>
+      <img *ngIf="myProfile?.imageURL===null" class="img-user" src="../../assets/user2.png">
+    </ion-buttons>
+    <ion-title class="title">Sohbetler</ion-title>
+
+    <ion-buttons (click)="addStoryCamera()" slot="end">
+      <div class="divcamera">
+        <ion-icon name="camera"></ion-icon>
+      </div>
+
+    </ion-buttons>
+    <ion-buttons (click)="warnMessage()" slot="end">
+      <div class="divpen">
+        <ion-icon name="pencil"></ion-icon>
+      </div>
+
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <ion-searchbar class="search" placeholder="Ara" animated (click)="navigateToSearch()">
+  </ion-searchbar>
+  <ion-list-header class="hikaye">Hikayeler</ion-list-header>
+
+  <div class="stories">
+
+    <div *ngIf="storyDurum===null" class="storyadd" (click)="addStory()">
+      <div>
+        <ion-icon class="add" name="add-outline"></ion-icon>
+      </div>
+      <p>Hikayen</p>
+    </div>
+
+    <ion-list lines="none" *ngFor="let story of storyList" (click)="selectStory(story)">
+      <ion-item>
+        <div class="img-border">
+          <div class="unseen">
+            <img *ngIf="story?.imageURL!=null" src={{story?.imageURL}}>
+            <img *ngIf="story?.imageURL===null" class="img-user" src="../../assets/storytemp.png">
+          </div>
+          <p>{{story?.firstName}} {{story?.lastName}}</p>
+        </div>
+      </ion-item>
+
+
+    </ion-list>
+
+  </div>
+
+  <ion-list-header class="mesaj">Mesajlar</ion-list-header>
+
+  <ion-list lines="none" *ngIf="myChats!=null ;else temp">
+    <ion-item *ngFor="let chat of myChats">
+      <ion-item (click)="goToMessage(chat)">
+
+        <img *ngIf="chat?.imageURL!=null" class="chatimg" src={{chat?.imageURL}}>
+        <img *ngIf="chat?.imageURL==null" class="chatimg" src="../../assets/user2.png">
+        <ion-label>
+          <ion-text class="chatname">{{chat?.firstName}} {{chat?.lastName}}<ion-text class="online"
+              *ngIf="chat?.status==='online'"> ● </ion-text>
+            <ion-text class="offline" *ngIf="chat?.status!='online'"> ● </ion-text>
+          </ion-text>
+          <ion-text class="email">{{chat?.email}}</ion-text>
+          <div>
+            <ion-text class="chatmsg"> {{chat?.lastMessage}}</ion-text>
+          </div>
+        </ion-label>
+      </ion-item>
+      <ion-icon (click)="deleteMessage(chat)" slot="end" name="ellipsis-horizontal"></ion-icon>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>
+
+<ng-template #temp>
+  <ion-textarea class="template">
+    <ion-text>Henüz kimseye mesaj atmadınız!</ion-text>
+  </ion-textarea>
+</ng-template>

@@ -1,0 +1,325 @@
+.bg-black {
+    background: black;
+}
+
+.divimg {
+    display   : block;
+    margin-top: 20px;
+    text-align: center;
+
+    .img {
+        border-radius  : 50%;
+        height         : 80px;
+        width          : 80px;
+        justify-content: center;
+    }
+}
+
+.divisim {
+
+    margin-top: 8px;
+    text-align: center;
+
+    .isim {
+        font-weight: bold;
+        font-size  : 20px;
+    }
+}
+
+.karanlık {
+    font-size    : 25px;
+    background   : rgb(0, 0, 0);
+    border-radius: 50%;
+    width        : 30px;
+    height       : 30px;
+    text-align   : center;
+    line-height  : 35px;
+
+    ion-icon {
+        color : white;
+        width : 20px;
+        height: 20px;
+    }
+}
+
+.mesaj {
+    font-size    : 25px;
+    background   : rgba(0, 195, 255, 0.829);
+    border-radius: 50%;
+    width        : 30px;
+    height       : 30px;
+    text-align   : center;
+    line-height  : 32px;
+
+    ion-icon {
+        color : white;
+        width : 20px;
+        height: 20px;
+    }
+}
+
+.profil {
+    justify-content: center;
+    font-size      : 25px;
+    background     : rgba(51, 255, 0, 0.829);
+    border-radius  : 50%;
+    width          : 30px;
+    height         : 30px;
+    text-align     : center;
+    line-height    : 32px;
+
+    ion-icon {
+        color : white;
+        width : 20px;
+        height: 20px;
+    }
+}
+
+.kullanıcı {
+    justify-content: center;
+    font-size      : 25px;
+    background     : rgba(255, 0, 0, 0.829);
+    border-radius  : 50%;
+    width          : 30px;
+    height         : 30px;
+    text-align     : center;
+    line-height    : 33.5px;
+
+    ion-icon {
+        color : white;
+        width : 20px;
+        height: 20px;
+    }
+}
+
+
+
+ion-list-header {
+    color: grey;
+}
+
+p {
+    font-size: 12px;
+    color    : grey;
+}
+
+.fotograf {
+    justify-content: center;
+    font-size      : 25px;
+    background     : purple;
+    border-radius  : 50%;
+    width          : 30px;
+    height         : 30px;
+    text-align     : center;
+    line-height    : 33.5px;
+
+    ion-icon {
+        color : white;
+        width : 20px;
+        height: 20px;
+    }
+}
+
+.konusma {
+    justify-content: center;
+    font-size      : 25px;
+    background     : black;
+    border-radius  : 50%;
+    width          : 30px;
+    height         : 30px;
+    text-align     : center;
+    line-height    : 33.5px;
+
+    ion-icon {
+        color : white;
+        width : 20px;
+        height: 20px;
+    }
+}
+
+.uygulama {
+    justify-content: center;
+    font-size      : 25px;
+    background     : blue;
+    border-radius  : 50%;
+    width          : 30px;
+    height         : 30px;
+    text-align     : center;
+    line-height    : 33.5px;
+
+    ion-icon {
+        color : white;
+        width : 20px;
+        height: 20px;
+    }
+}
+
+.hesapdegistir {
+    justify-content: center;
+    font-size      : 25px;
+    background     : rgb(218, 43, 218);
+    border-radius  : 50%;
+    width          : 30px;
+    height         : 30px;
+    text-align     : center;
+    line-height    : 33.5px;
+
+    ion-icon {
+        color : white;
+        width : 20px;
+        height: 20px;
+    }
+}
+
+.hesapayarları {
+    justify-content: center;
+    font-size      : 25px;
+    background     : rgb(28, 82, 199);
+    border-radius  : 50%;
+    width          : 30px;
+    height         : 30px;
+    text-align     : center;
+    line-height    : 33.5px;
+
+    ion-icon {
+        color : white;
+        width : 20px;
+        height: 20px;
+    }
+}
+
+.sorun {
+    justify-content: center;
+    font-size      : 25px;
+    background     : rgb(255, 153, 1);
+    border-radius  : 50%;
+    width          : 30px;
+    height         : 30px;
+    text-align     : center;
+    line-height    : 33.5px;
+
+    ion-icon {
+        color : white;
+        width : 20px;
+        height: 20px;
+    }
+}
+
+.yardım {
+    justify-content: center;
+    font-size      : 25px;
+    background     : rgb(19, 217, 252);
+    border-radius  : 50%;
+    width          : 30px;
+    height         : 30px;
+    text-align     : center;
+    line-height    : 33.5px;
+
+    ion-icon {
+        color : white;
+        width : 20px;
+        height: 20px;
+    }
+}
+
+.yasal {
+    justify-content: center;
+    font-size      : 25px;
+    background     : rgb(156, 154, 154);
+    border-radius  : 50%;
+    width          : 30px;
+    height         : 30px;
+    text-align     : center;
+    line-height    : 33.5px;
+
+    ion-icon {
+        color : white;
+        width : 20px;
+        height: 20px;
+    }
+}
+
+.cıkıs {
+    justify-content: center;
+    font-size      : 25px;
+    background     : rgb(0, 102, 255);
+    border-radius  : 50%;
+    width          : 30px;
+    height         : 30px;
+    text-align     : center;
+    line-height    : 33.5px;
+
+    ion-icon {
+        color : white;
+        width : 20px;
+        height: 20px;
+    }
+}
+
+.veri {
+    justify-content: center;
+    font-size      : 25px;
+    background     : rgb(0, 67, 168);
+    border-radius  : 50%;
+    width          : 30px;
+    height         : 30px;
+    text-align     : center;
+    line-height    : 33.5px;
+
+    ion-icon {
+        color : white;
+        width : 20px;
+        height: 20px;
+    }
+}
+
+.hikaye {
+    justify-content: center;
+    font-size      : 25px;
+    background     : rgb(42, 127, 255);
+    border-radius  : 50%;
+    width          : 30px;
+    height         : 30px;
+    text-align     : center;
+    line-height    : 33.5px;
+
+    ion-icon {
+        color : white;
+        width : 20px;
+        height: 20px;
+    }
+}
+.sms {
+    justify-content: center;
+    font-size      : 25px;
+    background     : rgb(108, 0, 197);
+    border-radius  : 50%;
+    width          : 30px;
+    height         : 30px;
+    text-align     : center;
+    line-height    : 33.5px;
+
+    ion-icon {
+        color : white;
+        width : 20px;
+        height: 20px;
+    }
+}
+.kisi {
+    justify-content: center;
+    font-size      : 25px;
+    background     : rgb(0, 204, 255);
+    border-radius  : 50%;
+    width          : 30px;
+    height         : 30px;
+    text-align     : center;
+    line-height    : 33.5px;
+
+    ion-icon {
+        color : white;
+        width : 20px;
+        height: 20px;
+    }
+}
+
+

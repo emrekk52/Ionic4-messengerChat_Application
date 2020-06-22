@@ -1,0 +1,40 @@
+<ion-card>
+  <ion-card-content>
+    <ion-item>
+      <ion-label color="primary" position="stacked">Ad</ion-label>
+      <ion-input [(ngModel)]="profile.firstName" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" position="stacked">Soyad</ion-label>
+      <ion-input [(ngModel)]="profile.lastName" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" position="stacked">Doğum Tarihi</ion-label>
+      <ion-datetime [(ngModel)]="profile.dateOfBirth" displayFormat="DD/MM/YYYY"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" position="stacked">Profil Fotoğrafı</ion-label>
+      <div class="flex">
+        <div class="img-box">
+          <img [src]="image">
+        </div>
+      </div>
+      <div class="button">
+        <ion-item lines="none">
+          <ion-button color="success" class="gallery" item-left (click)="addPhoto('library')">
+            <ion-icon name="image" class="image"></ion-icon>Galeri
+          </ion-button>
+          <ion-button color="warning" class="photo" item-right (click)="addPhoto('camera')">
+            <ion-icon name="camera" class="camera"></ion-icon>Fotoğraf
+          </ion-button>
+        </ion-item>
+      </div>
+    </ion-item>
+
+  </ion-card-content>
+</ion-card>
+<div class="div">
+  <ion-button color="danger" expand="block" class="finish" (click)="saveProfile()">
+    <ion-icon name="logo-firebase"></ion-icon>kaydet
+  </ion-button>
+</div>

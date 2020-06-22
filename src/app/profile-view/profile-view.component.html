@@ -1,0 +1,218 @@
+<div>
+  <div class="divimg">
+    <img class="img" [src]="image" alt="logo">
+  </div>
+
+  <div class="divisim">
+    <ion-text class="isim">{{isim}}</ion-text>
+  </div>
+
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <div>
+    <ion-list lines="none">
+
+
+      <ion-item>
+        <div slot="start" class="karanlık">
+          <ion-icon slot="start" name="moon-outline"></ion-icon>
+        </div>
+        <ion-text slot="start">Karanlık Modu</ion-text>
+        <ion-toggle [(ngModel)]="toggle" (ionChange)="colorChange($event)" slot="end" color="secondary"></ion-toggle>
+      </ion-item>
+
+
+      <ion-item>
+        <div slot="start" class="mesaj">
+          <ion-icon slot="start" name="chatbubble-ellipses-outline"></ion-icon>
+        </div>
+        <ion-text slot="start">Mesaj İstekleri</ion-text>
+      </ion-item>
+
+      <ion-list-header>
+        Profil
+      </ion-list-header>
+
+      <ion-item>
+        <div slot="start" class="profil">
+          <ion-icon slot="start" name="chatbubble-outline"></ion-icon>
+        </div>
+        <ion-label>
+          <ion-text slot="start">Aktif Durum</ion-text>
+          <p>Açık</p>
+        </ion-label>
+
+      </ion-item>
+
+      <ion-item>
+        <div slot="start" class="kullanıcı">
+          <ion-icon slot="start" name="at-outline"></ion-icon>
+        </div>
+        <ion-label>
+          <ion-text slot="start">Kullanıcı Adı</ion-text>
+          <p>m.me/{{email}}</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item>
+        <div slot="start" class="fotograf">
+          <ion-icon slot="start" name="notifications-outline"></ion-icon>
+        </div>
+        <ion-text slot="start">Bildirimler ve Sesler</ion-text>
+      </ion-item>
+
+
+      <ion-item>
+        <div slot="start" class="veri">
+          <ion-icon slot="start" name="wifi-outline"></ion-icon>
+        </div>
+        <ion-text slot="start">Veri Tasarrufu</ion-text>
+      </ion-item>
+
+      <ion-item>
+        <div slot="start" class="hikaye">
+          <ion-icon slot="start" name="images-outline"></ion-icon>
+        </div>
+        <ion-text slot="start">Hikaye</ion-text>
+      </ion-item>
+
+      <ion-item>
+        <div slot="start" class="sms">
+          <ion-icon slot="start" name="chatbubble-outline"></ion-icon>
+        </div>
+        <ion-text slot="start">SMS</ion-text>
+      </ion-item>
+
+
+      <ion-item>
+        <div slot="start" class="kisi">
+          <ion-icon slot="start" name="people-circle-outline"></ion-icon>
+        </div>
+        <ion-text slot="start">Kişiler</ion-text>
+      </ion-item>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <ion-item>
+        <div slot="start" class="fotograf">
+          <ion-icon slot="start" name="image-outline"></ion-icon>
+        </div>
+        <ion-text slot="start">Fotoğraflar ve Medya</ion-text>
+      </ion-item>
+
+      <ion-item>
+        <div slot="start" class="konusma">
+          <ion-icon slot="start" name="lock-closed-outline"></ion-icon>
+        </div>
+        <ion-text slot="start">Gizli Konuşmalar</ion-text>
+      </ion-item>
+
+      <ion-item>
+        <div slot="start" class="profil">
+          <ion-icon slot="start" name="albums-outline"></ion-icon>
+        </div>
+        <ion-text slot="start">Sohbet Balonları</ion-text>
+        <ion-toggle slot="end" color="success"></ion-toggle>
+      </ion-item>
+
+      <ion-item>
+        <div slot="start" class="uygulama">
+          <ion-icon slot="start" name="download-outline"></ion-icon>
+        </div>
+        <ion-text slot="start">Uygulama Güncellemeleri</ion-text>
+      </ion-item>
+
+      <ion-list-header>
+        Hesap
+      </ion-list-header>
+
+      <ion-item>
+        <div slot="start" class="hesapdegistir">
+          <ion-icon slot="start" name="swap-horizontal-outline"></ion-icon>
+        </div>
+        <ion-text slot="start">Hesap Değiştir</ion-text>
+      </ion-item>
+
+      <ion-item>
+        <div slot="start" class="hesapayarları">
+          <ion-icon slot="start" name="settings-outline"></ion-icon>
+        </div>
+        <ion-text slot="start">Hesap Ayarları</ion-text>
+      </ion-item>
+
+      <ion-item>
+        <div slot="start" class="sorun">
+          <ion-icon slot="start" name="warning-outline"></ion-icon>
+        </div>
+        <ion-text slot="start">Teknik Bir Sorun Bildir</ion-text>
+      </ion-item>
+
+      <ion-item>
+        <div slot="start" class="yardım">
+          <ion-icon slot="start" name="help-outline"></ion-icon>
+        </div>
+        <ion-text slot="start">Yardım</ion-text>
+      </ion-item>
+
+      <ion-item>
+        <div slot="start" class="yasal">
+          <ion-icon slot="start" name="document-text-outline"></ion-icon>
+        </div>
+        <ion-text slot="start">Yasal Bilgiler ve İlkeler</ion-text>
+      </ion-item>
+
+      <ion-item (click)="clearData()">
+        <div slot="start" class="sorun">
+          <ion-icon name="alert-circle-outline"></ion-icon>
+        </div>
+        <ion-text slot="start">Verileri Temizle</ion-text>
+      </ion-item>
+
+      <ion-item (click)="removeProfile()">
+        <div slot="start" class="konusma">
+          <ion-icon name="alert-outline"></ion-icon>
+        </div>
+        <ion-text slot="start">Hesabımı Sil</ion-text>
+      </ion-item>
+
+      <ion-item (click)="removeStory()">
+        <div slot="start" class="sms">
+          <ion-icon name="trash-outline"></ion-icon>
+        </div>
+        <ion-text slot="start">Hikayeni Sil</ion-text>
+      </ion-item>
+
+
+      <ion-item (click)="logout()">
+        <div slot="start" class="cıkıs">
+          <ion-icon slot="start" name="log-out-outline"></ion-icon>
+        </div>
+        <ion-text slot="start">Çıkış Yap</ion-text>
+      </ion-item>
+
+    </ion-list>
+  </div>
+</div>

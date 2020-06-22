@@ -1,0 +1,8 @@
+{
+  "name": "messengerApp",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

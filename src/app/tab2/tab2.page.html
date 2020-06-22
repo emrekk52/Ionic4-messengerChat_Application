@@ -1,0 +1,93 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="goToProfile()">
+      <img *ngIf="myProfile?.imageURL!=null" class="img" src={{myProfile?.imageURL}}>
+      <img *ngIf="myProfile?.imageURL===null" class="img-user" src="../../assets/user2.png">
+    </ion-buttons>
+    <ion-title class="title">Kişiler</ion-title>
+
+    <ion-buttons (click)="getFullProfileList()" slot="end">
+      <div class="divcamera">
+        <ion-icon name="list-outline"></ion-icon>
+      </div>
+
+    </ion-buttons>
+    <ion-buttons slot="end" (click)="goToChannelMessage()">
+      <div class="divpen">
+        <ion-icon name="person-add"></ion-icon>
+      </div>
+
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <ion-searchbar class="search" placeholder="Ara" animated (click)="navigateToSearch()"></ion-searchbar>
+  <ion-list-header class="hikaye">Hikayeler</ion-list-header>
+
+  <div class="stories">
+
+    <div class="storyadd" (click)="addStory()">
+      <ion-card class="card">
+        <ion-card-content>
+          <ion-icon name="add-outline"></ion-icon>
+          <p>Hikayen</p>
+        </ion-card-content>
+      </ion-card>
+    </div>
+
+    <ion-list lines="none" *ngFor="let story of storyList" (click)="selectStory(story)">
+      <ion-item>
+        <div>
+          <ion-card class="storycard">
+            <ion-thumbnail>
+              <ion-img class="storyimg" src={{story?.uploadImage}}></ion-img>
+            </ion-thumbnail>
+            <div class="center">
+              <img *ngIf="story?.imageURL!=null" class="storyprofile" src={{story?.imageURL}}>
+              <img *ngIf="story?.imageURL==null" class="storyprofile" src="../../assets/user2.png">
+              <div class="story-div" slot="start">
+                <ion-text slot="start" class="story-text">{{story?.firstName}} {{story?.lastName}}</ion-text>
+              </div>
+
+            </div>
+          </ion-card>
+        </div>
+      </ion-item>
+    </ion-list>
+
+  </div>
+
+  <ion-list-header class="aktif">Aktif</ion-list-header>
+
+  <ion-list *ngIf="profiles!=null; else temp">
+
+    <ion-item lines="none" *ngFor="let profile of profiles" (click)="goToMessage(profile)">
+      <img *ngIf="profile?.imageURL!=null" class="activephoto" src={{profile?.imageURL}}>
+      <img *ngIf="profile?.imageURL==null" class="activephoto" src="../../assets/user2.png">
+      <ion-label>
+        <ion-text class="label">{{profile?.firstName}} {{profile?.lastName}}<ion-text class="dot"> ● </ion-text>
+        </ion-text>
+      </ion-label>
+
+    </ion-item>
+
+  </ion-list>
+
+
+
+
+</ion-content>
+
+<ng-template #temp>
+  <ion-textarea class="template">
+    <ion-text>Aktif kişi bulunmuyor!</ion-text>
+  </ion-textarea>
+</ng-template>

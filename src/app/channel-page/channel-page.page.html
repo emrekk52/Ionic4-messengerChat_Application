@@ -1,0 +1,78 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-back-button class="back" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title">Kanal Sohbeti</ion-title>
+    <ion-buttons (click)="choosePhoto()" slot="end">
+      <ion-icon class="iconadd" name="add-circle-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-list lines="none" *ngIf="messagesList.length>0 ; else temp">
+
+    <ion-item *ngFor="let message of messagesList" [class]="message.name==name ? 'messageRight' : 'messageLeft'">
+
+
+
+      <ion-avatar slot="end" *ngIf="message.name==name">
+        <img class="pp" *ngIf="message?.imagePhoto!=null" src={{message?.imagePhoto}}>
+        <img class="pp" *ngIf="message?.imagePhoto==null" src="../../assets/user2.png">
+      </ion-avatar>
+
+      <ion-badge class="badgeright" *ngIf="message.name==name" slot="end">
+        <ion-label>
+          <h3 class="h3">{{message.name}}</h3>
+          <p>{{message.message}}</p>
+          <img *ngIf="message.uploadPhoto!=null" class="img" src={{message?.uploadPhoto}}>
+          <div>
+            <ion-text class="time">{{message.time}}</ion-text>
+          </div>
+        </ion-label>
+      </ion-badge>
+
+
+
+
+      <ion-badge slot="start" class="badgeleft" *ngIf="message.name!=name">
+        <ion-label>
+          <h3 class="h3">{{message.name}}</h3>
+          <p>{{message.message}}</p>
+          <img *ngIf="message.uploadPhoto!=null" class="img" src={{message?.uploadPhoto}}>
+          <div>
+            <ion-text class="time">{{message.time}}</ion-text>
+          </div>
+        </ion-label>
+      </ion-badge>
+
+      <ion-avatar slot="start" *ngIf="message.name!=name">
+        <img class="pp" *ngIf="message?.imagePhoto!=null" src={{message?.imagePhoto}}>
+        <img class="pp" *ngIf="message?.imagePhoto==null" src="../../assets/user2.png">
+      </ion-avatar>
+
+
+    </ion-item>
+  </ion-list>
+
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+</ion-content>
+
+<ion-footer>
+  <ion-item>
+    <ion-input type="text" placeholder="mesajınızı yazınız..." [(ngModel)]="newmessage"></ion-input>
+    <ion-button shape="round" color="danger" fill="outline" item-right (click)="send()">Gönder</ion-button>
+  </ion-item>
+</ion-footer>
+
+<ng-template #temp>
+  <ion-textarea class="template">
+    <ion-text>Hadi durma mesajlaşmaya başla!</ion-text>
+  </ion-textarea>
+</ng-template>

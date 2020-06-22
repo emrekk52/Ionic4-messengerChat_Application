@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button class="back" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title">Hikaye Ekle</ion-title>
+    <ion-buttons slot="end" (click)="choosePhoto()">
+      <ion-icon class="icon" name="add-circle"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div *ngIf="image===null;else getir">
+    <ion-textarea class="template">
+      <ion-text>Fotoğraf seçmek için <ion-icon name="add-circle"></ion-icon> butonuna basın</ion-text>
+    </ion-textarea>
+  </div>
+
+
+
+
+</ion-content>
+
+<ng-template #getir>
+  <ion-card>
+    <ion-card-content>
+      <img class="img" [src]="image">
+    </ion-card-content>
+  </ion-card>
+  <ion-button (click)="uploadStory()" color="success" expand="block">Yükle<ion-icon name="logo-firebase"></ion-icon>
+  </ion-button>
+</ng-template>

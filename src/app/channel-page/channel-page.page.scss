@@ -1,0 +1,86 @@
+.h3 {
+    font-weight: bolder;
+    font-size  : 17px;
+    color      : black;
+}
+
+.title {
+    font-weight: bold;
+    color      : white;
+}
+
+ion-content ion-toolbar {
+    --background: translucent;
+}
+
+.messageRight {
+    text-align: end;
+}
+
+.messageLeft {
+    text-align: start;
+}
+
+
+.back {
+    color: white;
+}
+
+.badgeleft {
+    border-top-left-radius   : 15px;
+    border-top-right-radius  : 15px;
+    border-bottom-left-radius: 15px;
+    margin                   : 10px;
+    padding-left             : 10px;
+    padding-right            : 10px;
+    background-color         : rgb(253, 188, 150);
+
+    p {
+        color: white;
+    }
+}
+
+.badgeright {
+    border-top-left-radius    : 15px;
+    border-top-right-radius   : 15px;
+    border-bottom-right-radius: 15px;
+    margin                    : 10px;
+    padding-left              : 10px;
+    padding-right             : 10px;
+    background-color          : rgb(253, 150, 150);
+
+    p {
+        color: white;
+    }
+}
+
+.img {
+    border-radius: 8px;
+    margin       : 4px;
+}
+
+.iconadd {
+    font-size   : 30px;
+    color       : white;
+    margin-right: 10px
+}
+
+.pp {
+    border-radius: 50%;
+    height       : 20px;
+    width        : 20px;
+    margin-top   : 5px;
+}
+
+.time {
+    color    : rgb(241, 241, 241);
+    font-size: 9px;
+}
+
+.template {
+    margin-top     : 70%;
+    text-align     : center;
+    font-weight    : bold;
+    font-size      : 17px;
+    justify-content: center;
+}

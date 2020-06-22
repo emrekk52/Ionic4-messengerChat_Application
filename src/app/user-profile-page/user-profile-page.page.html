@@ -1,0 +1,66 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button class="back" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title">{{selectedProfile?.firstName}} {{selectedProfile?.lastName}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+
+  <div class="background"></div>
+
+
+  <div class="img" (click)="fullscreen()">
+    <div>
+      <div>
+        <img *ngIf="selectedProfile?.imageURL!=null" src={{selectedProfile?.imageURL}}>
+        <img *ngIf="selectedProfile?.imageURL==null" src="../../assets/user2.png">
+      </div>
+    </div>
+  </div>
+
+
+  <ion-card>
+    <ion-card-content>
+      <ion-label>Adı | </ion-label>
+      <ion-text>{{selectedProfile?.firstName}}</ion-text>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+      <ion-label>Soyadı | </ion-label>
+      <ion-text>{{selectedProfile?.lastName}}</ion-text>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+      <ion-label>E-Mail | </ion-label>
+      <ion-text>{{selectedProfile?.email}}</ion-text>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+      <ion-label>Doğum Tarihi | </ion-label>
+      <ion-text>{{date}}</ion-text>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+      <ion-label>Durumu | </ion-label>
+      <ion-text class="online" *ngIf="status==='Çevrimiçi'">{{status}}</ion-text>
+      <ion-text class="offline" *ngIf="status!='Çevrimiçi'">{{status}}</ion-text>
+    </ion-card-content>
+  </ion-card>
+
+
+
+
+</ion-content>

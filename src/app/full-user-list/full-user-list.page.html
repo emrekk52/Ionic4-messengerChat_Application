@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button class="back" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title">Tüm Kişiler</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+
+  <ion-list lines="none" *ngIf="fullList.length>0 ;else temp">
+
+    <ion-item *ngFor="let profiles of fullList">
+      <ion-item (click)="goToMessage(profiles)">
+
+        <img *ngIf="profiles?.imageURL!=null" class="chatimg" src={{profiles?.imageURL}}>
+        <img *ngIf="profiles?.imageURL==null" class="chatimg" src="../../assets/user2.png">
+        <ion-label>
+          <ion-text class="chatname">{{profiles?.firstName}} {{profiles?.lastName}}<ion-text class="online"
+              *ngIf="profiles?.status==='online'"> ● </ion-text>
+            <ion-text class="offline" *ngIf="profiles?.status!='online'"> ● </ion-text>
+          </ion-text>
+          <div>
+            <ion-text class="email">{{profiles?.email}}</ion-text>
+          </div>
+        </ion-label>
+      </ion-item>
+
+      <div slot="end" class="profile">
+        <ion-icon (click)="goToProfile(profiles)" slot="end" name="information-circle"></ion-icon>
+      </div>
+
+    </ion-item>
+
+
+
+  </ion-list>
+
+
+</ion-content>
+<ng-template #temp>
+  <ion-textarea class="template">
+    <ion-text>Tüm kişileri getirmek için yukarıdan aşağıya çekin</ion-text>
+  </ion-textarea>
+</ng-template>

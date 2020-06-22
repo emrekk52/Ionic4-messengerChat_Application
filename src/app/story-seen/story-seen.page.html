@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button class="back" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{selectStory?.firstName}} {{selectStory?.lastName}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <ion-list lines="none">
+
+    <ion-list-header class="header">Hikayemi Görüntüleyenler</ion-list-header>
+    <div *ngIf="storySeenList.length>0 ;else temp">
+      <ion-item *ngFor="let view of storySeenList" (click)="goToMessage(view)">
+
+        <img class=" duzen" src={{view?.imageURL}}>
+        <ion-label>
+          <h3 class="h3">{{view?.firstName +' '+ view?.lastName}}<ion-text *ngIf="view?.status==='online'"
+              class="online"> ● </ion-text>
+            <ion-text *ngIf="view?.status!='online'" class="offline"> ● </ion-text>
+          </h3>
+        </ion-label>
+      </ion-item>
+    </div>
+
+  </ion-list>
+
+</ion-content>
+<ng-template #temp>
+  <ion-textarea class="template">
+    <ion-text>Henüz hikayenizi kimse görüntülemedi!</ion-text>
+  </ion-textarea>
+</ng-template>

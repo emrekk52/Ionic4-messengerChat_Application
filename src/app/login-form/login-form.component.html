@@ -1,0 +1,22 @@
+<div >
+  <ion-card class="card">
+    <ion-card-content>
+      <ion-item>
+        <ion-label   class="label1" position="floating">Kullanıcı adı veya email adresi</ion-label>
+        <ion-input [(ngModel)]="account.email" type="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label id="pass" class="label2" position="floating">Şifrenizi giriniz</ion-label>
+        <ion-input [(ngModel)]="account.password" [type]="hide ? 'password' : 'text'" required>
+        </ion-input>
+        <ion-icon class="iconsize" slot="end" [name]="hide ? 'eye-outline' : 'eye-off-outline'" (click)="hide = !hide">
+        </ion-icon>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</div>
+<div class="button">
+  <ion-button color="primary" expand="block" (click)="login()">Giriş Yap</ion-button>
+  <ion-button color="success" expand="block" (click)="navigateToRegister()">Yeni Hesap Oluştur</ion-button>
+  <p (click)="resetPassword()" class="sifreunuttum">Şifremi Unuttum</p>
+</div>

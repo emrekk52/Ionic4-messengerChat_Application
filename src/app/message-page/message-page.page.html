@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start">
+      <ion-back-button class="back" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <img (click)="getToProfile()" *ngIf="selectedProfile?.imageURL!=null" class="userToAvatar"
+      src={{selectedProfile?.imageURL}}>
+    <img (click)="getToProfile()" *ngIf="selectedProfile?.imageURL==null" class="userToAvatar"
+      src="../../assets/user2.png">
+    <ion-text class="title">{{selectedProfile?.firstName+' '+selectedProfile?.lastName}}</ion-text>
+    <ion-buttons slot="end" (click)="choosePhoto()">
+      <ion-icon class="image" name="images-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <ion-list lines="none" *ngIf="getMessageList.length>0 ;else temp">
+
+    <ion-item *ngFor="let message of getMessageList"
+      [class]="message.userFromProfile.firstName==name ? 'messageRight' : 'messageLeft'">
+
+
+
+      <ion-badge *ngIf="message.userFromProfile.firstName==name" class="badgeright" slot="end">
+        <ion-label>
+          <h3 class="h3">{{message.userFromProfile.firstName+' '+message.userFromProfile.lastName}}</h3>
+          <p>{{message.content}}</p>
+          <img class="img" *ngIf="message?.uploadImage!=null" src={{message?.uploadImage}}
+            (click)="selectPhoto(message?.uploadImage)">
+          <div>
+            <ion-text slot="end" class="timeright">{{message.time}}</ion-text>
+            <ion-text *ngIf="message.durum==='görüldü'" slot="end" class="timeright">{{message.durum}}</ion-text>
+          </div>
+
+
+        </ion-label>
+
+      </ion-badge>
+      <ion-badge class="badgeleft" *ngIf="message.userFromProfile.firstName!=name" slot="start">
+        <ion-label>
+          <h3 class="h3">{{message.userFromProfile.firstName+' '+message.userFromProfile.lastName}}</h3>
+          <p>{{message.content}}</p>
+          <img class="img" *ngIf="message?.uploadImage!=null" src={{message?.uploadImage}}
+            (click)="selectPhoto(message?.uploadImage)">
+          <div>
+            <ion-text slot="start" class="timeleft">{{message.time}}</ion-text>
+            <ion-text *ngIf="message.durum==='görüldü'" slot="start" class="timeleft">{{message.durum}}</ion-text>
+          </div>
+        </ion-label>
+      </ion-badge>
+
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>
+
+<ion-footer>
+  <ion-item>
+    <ion-input [(ngModel)]="content" type="text" placeholder="mesajınızı yazınız..."></ion-input>
+    <ion-button (click)="sendMessage(content)" shape="round" color="warning" fill="outline" item-right>Gönder
+    </ion-button>
+  </ion-item>
+</ion-footer>
+
+<ng-template #temp>
+  <ion-textarea class="template">
+    <ion-text>Hadi durma ilk mesajı sen at!</ion-text>
+  </ion-textarea>
+</ng-template>
