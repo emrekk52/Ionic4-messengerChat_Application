@@ -2,6 +2,9 @@
 
 ![gif3](https://user-images.githubusercontent.com/50170946/85266769-05d55480-b47d-11ea-8c03-d50adb1b755f.gif)
 
+# APK 
+ https://github.com/emrekk52/Ionic4-messengerChat_Application/files/4813002/messengerChat.zip
+
 # Özellikler
 
  * Kullanıcı oluşturma,yeni kayıt ve güncelleme işlemleri
