@@ -29,5 +29,6 @@
  * (Bölüm-14) https://www.udemy.com/course/learn-ionic-3-from-scratch/ ~ (4h 16m)
  * https://www.youtube.com/watch?v=T9XoKE8w0dI&t=599s ~ (13m)
  * https://www.youtube.com/watch?v=VTe6XcOmpNc ~ (41m)
- * https://stackoverflow.com/
+ * https://stackoverflow.com/questions/58640790/how-to-add-border-radius-to-ion-img-in-ionic-4
+ * https://forum.ionicframework.com/t/how-to-remove-shadows-from-navbar/62818/11
 
