@@ -26,11 +26,11 @@
 
 # Yardımcı Kaynaklar ve Videolar
 
- * (Bölüm-14) https://www.udemy.com/course/learn-ionic-3-from-scratch/ ~ (4h 16m)
- * https://www.youtube.com/watch?v=T9XoKE8w0dI&t=599s ~ (13m)
- * https://www.youtube.com/watch?v=VTe6XcOmpNc ~ (41m)
- * https://www.youtube.com/watch?v=oDRgjgUpzeA ~ (7m)
- * https://stackoverflow.com/questions/58640790/how-to-add-border-radius-to-ion-img-in-ionic-4
- * https://forum.ionicframework.com/t/how-to-remove-shadows-from-navbar/62818/11
+ * (Bölüm-14) https://www.udemy.com/course/learn-ionic-3-from-scratch/ ~ (4h 16m) (Ionic 3 Chat Uygulaması)
+ * https://www.youtube.com/watch?v=T9XoKE8w0dI&t=599s ~ (13m) (Arama kısmında sesli komut kullanımı)
+ * https://www.youtube.com/watch?v=VTe6XcOmpNc ~ (41m) (Kullanıcılar arası mesajlaşma)
+ * https://www.youtube.com/watch?v=oDRgjgUpzeA ~ (7m) (Kamera erişimi ve fotoğraf çekmek)
+ * https://stackoverflow.com/questions/58640790/how-to-add-border-radius-to-ion-img-in-ionic-4 (Fotoğrafa ovallik kazandırma)
+ * https://forum.ionicframework.com/t/how-to-remove-shadows-from-navbar/62818/11 (Navbar saydam yapma)
  
 
