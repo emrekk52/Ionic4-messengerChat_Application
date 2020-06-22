@@ -4,10 +4,10 @@
 
 # Özellikler
 
- * Kullanıcı oturum işlemleri
+ * Kullanıcı oluşturma,yeni kayıt ve güncelleme işlemleri
  * Firebase ile mesajlaşma,kanal sohbeti ve story yükleme..
- * Firebase veritabanında kullanıcı arama(sesli komut desteği)
- * Cihaz dosya konumlarına erişerek fotoğraf gönderme,story yükleme
+ * Firebase veritabanında kullanıcı arama(sesli komut desteği) işlemini yapabilirsiniz
+ * Cihaz galerisine erişerek fotoğraf ve story gönderebilirsiniz
  
 
 # MessengerChat - Gallery
