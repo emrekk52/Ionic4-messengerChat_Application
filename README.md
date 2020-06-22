@@ -1,11 +1,14 @@
-# Messenger Clone Chat App v1.0
+# Messenger Clone Chat App v1.0  :coffee:
 
 ![gif3](https://user-images.githubusercontent.com/50170946/85266769-05d55480-b47d-11ea-8c03-d50adb1b755f.gif)
 
-# Gereksinimler
+# Özellikler
 
-• npm install --save @ionic/storage
-• npm install @ionic-native/camera
+ * Kullanıcı oturum işlemleri
+ * Firebase ile mesajlaşma,kanal sohbeti ve story yükleme..
+ * Firebase veritabanında kullanıcı arama(sesli komut desteği)
+ * Cihaz dosya konumlarına erişerek fotoğraf gönderme,story yükleme
+ 
 
 # MessengerChat - Gallery
 
@@ -20,4 +23,11 @@
 • <img src="https://user-images.githubusercontent.com/50170946/85269817-1d164100-b481-11ea-9102-6f3a4fbe71a1.png" width="170" height="300">
 • <img src="https://user-images.githubusercontent.com/50170946/85269823-1e476e00-b481-11ea-99fc-9f7b2375374a.png" width="170" height="300">
 • <img src="https://user-images.githubusercontent.com/50170946/85269827-1ee00480-b481-11ea-9934-05b686035c65.png" width="170" height="300">
+
+# Yardımcı Kaynaklar ve Videolar
+
+ * (Bölüm-14) https://www.udemy.com/course/learn-ionic-3-from-scratch/ ~ (4h 16m)
+ * https://www.youtube.com/watch?v=T9XoKE8w0dI&t=599s ~ (13m)
+ * https://www.youtube.com/watch?v=VTe6XcOmpNc ~ (41m)
+ * https://stackoverflow.com/
 
